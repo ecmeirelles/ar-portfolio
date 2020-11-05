@@ -1,8 +1,8 @@
 import React from "react";
 import {Home} from "./Home/Home";
-import {ContentSt, WrapperSt} from "./App.css";
+import {ContentSt, WrapperSt} from "./Root.css";
 
-const App = () => {
+const Root = () => {
   return (
     <WrapperSt>
       <ContentSt>
@@ -12,4 +12,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Root;

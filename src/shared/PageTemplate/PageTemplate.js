@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Navbar} from "../../components/Navbar/Navbar";
+import {Navbar} from "../Navbar/Navbar";
 import {ContentSt, WrapperSt} from "./PageTemplate.css";
 
 export const PageTemplate = ({ children }) => {

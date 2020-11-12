@@ -1,5 +1,4 @@
-import styled, {css} from 'styled-components';
-import {media} from "../variables";
+import styled from 'styled-components';
 
 export const WrapperSt = styled.div`
   display: flex;
@@ -8,16 +7,13 @@ export const WrapperSt = styled.div`
   left: 0;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   background-color: #CCC;
-  
-  ${media.sm(css`
-    width: 100%;
-    height: 100%;
-  `)}
 `;
 
 export const ContentSt = styled.div`
   display: flex;
   width: 100%;
-  margin-top: 64px;
+  margin-top: 80px;
 `;

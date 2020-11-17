@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 import { media } from "../../shared/variables";
@@ -7,52 +7,60 @@ export const ContentSt = styled.div`
   width: 100%;
   margin: 24px;
   
+  ${media.sm(css`
+    margin: auto 24px;
+  `)}
+  
   ${media.md(css`
     width: 75%;
     margin: auto;
   `)}
   
   ${media.xl(css`
-    width: 65%;
+    width: 48%;
   `)}
 `;
 
 export const GreetingSt = styled.h3`
-  margin-top: 24px;
+  margin-top: 32px;
   font-size: 24px;
   font-weight: normal;
   
-  ${media.md(css`
+  ${media.sm(css`
     margin-top: 0;
-    font-size: 40px;
+  `)}
+  
+  ${media.md(css`
+    font-size: 32px;
   `)}
 `;
 
 export const TitleSt = styled.h1`
-  margin-top: 8px;
+  margin-top: 2px;
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 600;
   
   ${media.md(css`
-    margin-top: 24px;
-    font-size: 72px;
+    margin-top: 16px;
+    font-size: 56px;
   `)}
 `;
 
 export const LinkButtonSt = styled(Link)`
-  display: block;
+  display: flex;
   max-width: 190px;
-  margin-top: 32px;
-  padding: 16px;
-  font-size: 20px;
-  text-align: center;
-  background-color: #A9A9A9;
-  border: solid 1px #A9A9A9;
-  border-radius: 32px;
+  height: 32px;
+  margin-top: 24px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(125, 125, 125, 0.6);
+  border-radius: 24px;
   
   ${media.md(css`
-    max-width: 300px;
+    max-width: 267px;
     margin-top: 48px;
-    font-size: 24px;
   `)}
 `;

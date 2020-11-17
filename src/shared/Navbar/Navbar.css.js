@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 import { media } from "../variables";
 
 export const MenuBarSt = styled.div`
@@ -7,8 +7,8 @@ export const MenuBarSt = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  background-color: #DCDCDC;
+  height: 88px;
+  background-color: ${({ backgroundColor }) => backgroundColor};
 `;
 
 export const ContentSt = styled.div`
@@ -17,7 +17,11 @@ export const ContentSt = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  margin: 0 32px;
+  margin: 0 24px;
+  
+  ${media.md(css`
+    margin: 0 56px;
+  `)}
 `;
 
 export const LogoSt = styled.div`

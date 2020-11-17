@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import {ContentSt, LogoSt, MenuBarSt, MenuItemsSt} from "./Navbar.css";
-import {Link} from "react-router-dom";
+import { ContentSt, LogoSt, MenuBarSt, MenuItemsSt } from "./Navbar.css";
 
-export const Navbar = () => {
+export const Navbar = ({ backgroundColor }) => {
   return (
-    <MenuBarSt>
+    <MenuBarSt backgroundColor={backgroundColor}>
       <ContentSt>
         <LogoSt>
           <Link to="/">ar.</Link>

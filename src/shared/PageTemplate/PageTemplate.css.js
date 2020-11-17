@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const WrapperSt = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const WrapperSt = styled.div`
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #CCC;
+  background-color: ${({ backgroundColor }) => backgroundColor};
 `;
 
 export const ContentSt = styled.div`

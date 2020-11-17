@@ -1,12 +1,12 @@
 import React from "react";
 
-import {Navbar} from "../Navbar/Navbar";
-import {ContentSt, WrapperSt} from "./PageTemplate.css";
+import { Navbar } from "../Navbar/Navbar";
+import { ContentSt, WrapperSt } from "./PageTemplate.css";
 
-export const PageTemplate = ({ children }) => {
+export const PageTemplate = ({ backgroundColor, children, navbarColor }) => {
   return (
-    <WrapperSt>
-      <Navbar/>
+    <WrapperSt backgroundColor={backgroundColor}>
+      <Navbar backgroundColor={navbarColor} />
       <ContentSt>
         {children}
       </ContentSt>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import { LinkButtonSt, ContentSt, GreetingSt, TitleSt } from "./Home.css";
 

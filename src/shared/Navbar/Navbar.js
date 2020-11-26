@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import { ContentSt, LogoSt, MenuBarSt, MenuItemsSt } from "./Navbar.css";
 
-export const Navbar = ({ backgroundColor }) => {
+export const Navbar = () => {
   return (
-    <MenuBarSt backgroundColor={backgroundColor}>
+    <MenuBarSt>
       <ContentSt>
         <LogoSt>
           <Link to="/">ar.</Link>

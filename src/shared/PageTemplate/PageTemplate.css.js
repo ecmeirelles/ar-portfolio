@@ -9,7 +9,7 @@ export const WrapperSt = styled.div`
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background-color: #FFF;
 `;
 
 export const ContentSt = styled.div`

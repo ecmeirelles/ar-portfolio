@@ -5,30 +5,26 @@ import { media } from "../../shared/variables";
 
 export const ContentSt = styled.div`
   width: 100%;
-  margin: 24px;
-  
-  ${media.sm(css`
-    margin: auto 24px;
-  `)}
+  margin: auto 24px;
   
   ${media.md(css`
-    width: 75%;
-    margin: auto;
+    max-width: 580px;
+    margin-left: 90px;
+  `)}
+  
+  ${media.lg(css`
+    max-width: 768px;
+    margin-left: 118px;
   `)}
   
   ${media.xl(css`
-    width: 48%;
+    margin-left: 156px;
   `)}
 `;
 
 export const GreetingSt = styled.h3`
-  margin-top: 32px;
   font-size: 24px;
   font-weight: normal;
-  
-  ${media.sm(css`
-    margin-top: 0;
-  `)}
   
   ${media.md(css`
     font-size: 32px;
@@ -48,19 +44,16 @@ export const TitleSt = styled.h1`
 
 export const LinkButtonSt = styled(Link)`
   display: flex;
-  max-width: 190px;
-  height: 32px;
-  margin-top: 24px;
-  padding: 8px 16px;
-  font-size: 16px;
-  font-weight: 500;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(125, 125, 125, 0.6);
-  border-radius: 24px;
+  margin-top: 16px;
+  font-size: 24px;
+  
+  &:before {
+    content: '->';
+    margin-right: 16px;
+  }
   
   ${media.md(css`
-    max-width: 267px;
-    margin-top: 48px;
+    margin-top: 40px;
+    font-size: 32px;
   `)}
 `;

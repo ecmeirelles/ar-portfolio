@@ -1,4 +1,11 @@
-import {css} from "styled-components";
+import { css } from "styled-components";
+
+export const colors = {
+  white: '#FFFFFF',
+  gray: '#CACACA',
+  lightGray: '#F3F3F3',
+  black: '#101010',
+};
 
 export const breakpoints = {
   xs: 320, // default

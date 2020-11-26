@@ -3,10 +3,10 @@ import React from "react";
 import { Navbar } from "../Navbar/Navbar";
 import { ContentSt, WrapperSt } from "./PageTemplate.css";
 
-export const PageTemplate = ({ backgroundColor, children, navbarColor }) => {
+export const PageTemplate = ({ children }) => {
   return (
-    <WrapperSt backgroundColor={backgroundColor}>
-      <Navbar backgroundColor={navbarColor} />
+    <WrapperSt>
+      <Navbar />
       <ContentSt>
         {children}
       </ContentSt>

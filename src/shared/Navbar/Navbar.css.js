@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { media } from "../variables";
+import { colors, media } from "../variables";
 
 export const MenuBarSt = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ export const MenuBarSt = styled.div`
   left: 0;
   width: 100%;
   height: 88px;
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background-color: ${colors.white};
 `;
 
 export const ContentSt = styled.div`

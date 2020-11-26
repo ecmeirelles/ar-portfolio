@@ -1,3 +1,7 @@
+import { createGlobalStyle } from "styled-components";
+import { colors } from './shared/variables';
+
+export const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;;
@@ -6,9 +10,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-p, span, div {
+p, span, div, a {
   font-family: 'Inter', sans-serif;
-  color: #101010;
+  color: ${colors.black};
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,7 +20,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  font-family: 'Inter', sans-serif;
-  color: #1a1a1a;
   text-decoration: none;
 }
+`;

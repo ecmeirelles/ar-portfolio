@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope  } from '@fortawesome/free-regular-svg-icons';
+import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 import { data } from "./utils";
 import {
@@ -36,13 +39,13 @@ export const About = () => {
         </p>
         <SocialMediaContainerSt>
           <SocialMediaIconSt href="mailto:me@alicerevel.com" target="_blank" rel="noreferrer">
-            Email
+            <FontAwesomeIcon icon={faEnvelope} size="lg" />
           </SocialMediaIconSt>
           <SocialMediaIconSt href="https://www.linkedin.com/in/alice-revel/" target="_blank" rel="noreferrer">
-            LinkedIn
+            <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
           </SocialMediaIconSt>
           <SocialMediaIconSt href="https://www.instagram.com/a_rvl/" target="_blank" rel="noreferrer">
-            Instagram
+            <FontAwesomeIcon icon={faInstagram} size="lg" />
           </SocialMediaIconSt>
         </SocialMediaContainerSt>
       </LetsTalkrSt>

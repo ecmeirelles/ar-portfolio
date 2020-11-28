@@ -10,6 +10,10 @@ export const WrapperSt = styled.div`
 export const HeaderSt = styled.div`
   margin: 24px 24px 20px;
   
+  h3 {
+    line-height: 24px;
+  }
+  
   ${media.md(css`
     max-width: 460px;
     margin-left: 90px;
@@ -52,6 +56,9 @@ export const TitleSt = styled.h1`
 `;
 
 export const ContentSt = styled.div`
+  h3 {
+    line-height: 24px;
+  }
   ${media.md(css`
     h3 {
       max-width: 500px;
@@ -148,7 +155,7 @@ export const LetsTalkrSt = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 64px 0px;
+    padding: 44px 0px 64px;
     
     > p a {
       font-weight: 600;

@@ -9,6 +9,7 @@ export const MenuBarSt = styled.div`
   width: 100%;
   height: 88px;
   background-color: ${colors.white};
+  z-index: 999;
 `;
 
 export const ContentSt = styled.div`

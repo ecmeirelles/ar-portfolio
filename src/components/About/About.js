@@ -8,8 +8,15 @@ import {
   WrapperSt,
   ContainerSt,
   ContentSt,
+  BoxSt,
+  Box2St,
   TitleSt,
-  DescriptionSt, HeaderSt, SubTitleSt, SocialMediaContainerSt, SocialMediaIconSt, LetsTalkrSt,
+  DescriptionSt,
+  HeaderSt,
+  SubTitleSt,
+  SocialMediaContainerSt,
+  SocialMediaIconSt,
+  LetsTalkrSt,
 } from "./About.css";
 
 export const About = () => {
@@ -24,14 +31,19 @@ export const About = () => {
         </DescriptionSt>
       </HeaderSt>
 
-      {data.map(content => (
-        <ContainerSt key={content.id}>
-          <ContentSt>
-            <SubTitleSt>{content.title}</SubTitleSt>
-            <DescriptionSt>{content.description}</DescriptionSt>
-          </ContentSt>
-        </ContainerSt>
-      ))}
+      {data.map((content, index) => {
+        const isIndexEven = index % 2 === 0;
+        return (
+          <ContainerSt key={content.id}>
+            <ContentSt comesFromRight={isIndexEven}>
+              <SubTitleSt>{content.title}</SubTitleSt>
+              <DescriptionSt>{content.description}</DescriptionSt>
+            </ContentSt>
+            <BoxSt comesFromRight={isIndexEven} />
+            <BoxSt comesFromRight={!isIndexEven} />
+          </ContainerSt>
+        )
+      })}
       <LetsTalkrSt>
         <p>
           You’ve read this far?
@@ -39,13 +51,13 @@ export const About = () => {
         </p>
         <SocialMediaContainerSt>
           <SocialMediaIconSt href="mailto:me@alicerevel.com" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faEnvelope} size="lg" />
+            <FontAwesomeIcon icon={faEnvelope} size="2x" />
           </SocialMediaIconSt>
           <SocialMediaIconSt href="https://www.linkedin.com/in/alice-revel/" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+            <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
           </SocialMediaIconSt>
           <SocialMediaIconSt href="https://www.instagram.com/a_rvl/" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faInstagram} size="lg" />
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
           </SocialMediaIconSt>
         </SocialMediaContainerSt>
       </LetsTalkrSt>

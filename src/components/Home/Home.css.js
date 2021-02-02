@@ -33,7 +33,7 @@ export const GreetingSt = styled.h3`
 
 export const TitleSt = styled.h1`
   margin-top: 2px;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600;
   
   ${media.md(css`

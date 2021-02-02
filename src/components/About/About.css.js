@@ -56,78 +56,80 @@ export const TitleSt = styled.h1`
 `;
 
 export const ContentSt = styled.div`
+  position: relative;
+  padding: 24px;
+  
   h3 {
     line-height: 24px;
   }
   ${media.md(css`
+    position: absolute;
+    top: 204px;
+    z-index: 99;
+    padding: 0;
+    
+    ${({ comesFromRight }) => comesFromRight ? css`
+      right: 90px;
+    ` : css`
+      left: 90px;
+    `};
     h3 {
       max-width: 500px;
     }
   `)}
   ${media.lg(css`
+    ${({ comesFromRight }) => comesFromRight ? css`
+      right: 118px;
+    ` : css`
+      left: 118px;
+    `};
+    h3 {
+      max-width: 568px;
+    }
+  `)}
+  ${media.xl(css`
+    ${({ comesFromRight }) => comesFromRight ? css`
+      right: 156px;
+    ` : css`
+      left: 156px;
+    `};
     h3 {
       max-width: 568px;
     }
   `)}
 `;
 
+export const BoxSt = styled.div`
+  width: ${({ comesFromRight }) => comesFromRight ? 'calc(100% - 24px)' : '24px'};
+  background-color: ${({ comesFromRight }) => comesFromRight ? colors.gray : colors.white};
+  
+  ${({ comesFromRight }) => comesFromRight ? css`
+    height: 186px;
+  ` : css`
+    display: none;
+  `}
+  
+  ${media.md(css`
+    display: flex;
+    height: 568px;
+    width: ${({ comesFromRight }) => comesFromRight ? 75 : 25}%;
+  `)}
+  
+  ${media.xl(css`
+    width: ${({ comesFromRight }) => comesFromRight ? 80 : 20}%;
+  `)}
+`;
+
 export const ContainerSt = styled.div`
   display: flex;
-  margin: 20px 0;
-  padding: 24px;
+  margin: 8px 0;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   
   ${media.md(css`
-    padding: 86px 0;
-    
-    &:nth-child(even) {
-      background: linear-gradient(90deg, ${colors.gray} 75%, ${colors.white} 25%);
-      
-      ${ContentSt} {
-        margin-left: calc(100px + 10%);
-      }
-    }
-    
-    &:nth-child(odd) {
-      background: linear-gradient(90deg, ${colors.white} 25%, ${colors.gray} 75%);
-      
-      ${ContentSt} {
-        padding-left: 90px;
-      }
-    }
-  `)}
-  
-  ${media.lg(css`
-    padding: 156px 0;
-  
-    &:nth-child(even) {
-      ${ContentSt} {
-        margin-left: calc(150px + 15%);
-      }
-    }
-    
-    &:nth-child(odd) {
-      ${ContentSt} {
-        padding-left: 118px;
-      }
-    }
-  `)}
-  
-  ${media.xl(css`
-    padding: 204px 0;
-  
-    &:nth-child(even) {
-      ${ContentSt} {
-        margin-left: calc(300px + 30%);
-      }
-    }
-    
-    &:nth-child(odd) {
-      ${ContentSt} {
-        padding-left: 156px;
-      }
-    }
+    margin: 20px 0;
+    flex-direction: row;
   `)}
 `;
 

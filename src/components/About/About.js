@@ -9,7 +9,6 @@ import {
   ContainerSt,
   ContentSt,
   BoxSt,
-  Box2St,
   TitleSt,
   DescriptionSt,
   HeaderSt,

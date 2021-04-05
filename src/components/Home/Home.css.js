@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
 
 import { media } from "../../shared/variables";
 
@@ -33,27 +32,13 @@ export const GreetingSt = styled.h3`
 
 export const TitleSt = styled.h1`
   margin-top: 2px;
+  margin-bottom: 16px;
   font-size: 32px;
   font-weight: 600;
   
   ${media.md(css`
     margin-top: 16px;
+    margin-bottom: 40px;
     font-size: 56px;
-  `)}
-`;
-
-export const LinkButtonSt = styled(Link)`
-  display: flex;
-  margin-top: 16px;
-  font-size: 24px;
-  
-  &:before {
-    content: '->';
-    margin-right: 16px;
-  }
-  
-  ${media.md(css`
-    margin-top: 40px;
-    font-size: 32px;
   `)}
 `;

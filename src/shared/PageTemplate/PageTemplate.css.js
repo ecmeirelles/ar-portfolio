@@ -9,11 +9,11 @@ export const WrapperSt = styled.div`
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #FFF;
+  background-color: ${({ bgColor }) => bgColor && bgColor};
 `;
 
 export const ContentSt = styled.div`
   display: flex;
   width: 100%;
-  margin-top: 80px;
+  margin-top: ${({ isTransparent }) => isTransparent ? 0 : 80}px;
 `;

@@ -5,6 +5,7 @@ import { colors, media } from "../../shared/variables";
 export const WrapperSt = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
 `;
 
 export const TextWrapperSt = styled.div`
@@ -29,6 +30,7 @@ export const ImageWrapperSt = styled(Link)`
   height: 100%;
   position: relative;
   display: inline-block;
+  margin: 2px 0;
   vertical-align: top;
   background-size: cover;
   background-position: 50% 50%;
@@ -59,7 +61,7 @@ export const ImageWrapperSt = styled(Link)`
   `)}
 `;
 
-export const ProjectTitleSt = styled.div`
+export const ProjectTitleSt = styled.h1`
   font-size: 24px;
   font-weight: bold;
   color: ${colors.white};
@@ -71,11 +73,13 @@ export const ProjectTitleSt = styled.div`
 `;
 
 export const ProjectSubtitleSt = styled.div`
+  margin-top: 8px;
   font-size: 16px;
   color: ${colors.white};
   text-shadow: 1px 1px 2px ${colors.black};
   
-  ${media.md(css`
+  ${media.lg(css`
+    margin-top: 16px;
     font-size: 24px;
   `)}
 `;

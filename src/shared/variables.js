@@ -2,9 +2,13 @@ import { css } from "styled-components";
 
 export const colors = {
   white: '#FFFFFF',
-  gray: '#CACACA',
+  pearl: '#FAFAFA',
+  gray: '#5A5A5A',
   lightGray: '#F3F3F3',
   black: '#101010',
+  charcoal: '#303030',
+  strawberry: '#f05454',
+  lapizBlue: '#30455e',
 };
 
 export const breakpoints = {

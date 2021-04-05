@@ -11,6 +11,7 @@ export const HeaderSt = styled.div`
   margin: 24px 24px 20px;
   
   h3 {
+    color: ${colors.white};
     line-height: 24px;
   }
   
@@ -45,6 +46,7 @@ export const TitleSt = styled.h1`
   margin-bottom: 24px;
   font-size: 32px;
   font-weight: 600;
+  color: ${colors.white};
   
   ${media.md(css`
     font-size: 48px;
@@ -60,6 +62,7 @@ export const ContentSt = styled.div`
   padding: 24px;
   
   h3 {
+    color: ${colors.white};
     line-height: 24px;
   }
   ${media.md(css`
@@ -101,7 +104,7 @@ export const ContentSt = styled.div`
 
 export const BoxSt = styled.div`
   width: ${({ comesFromRight }) => comesFromRight ? 'calc(100% - 24px)' : '24px'};
-  background-color: ${({ comesFromRight }) => comesFromRight ? colors.gray : colors.white};
+  background-color: ${({ comesFromRight }) => comesFromRight ? colors.gray : colors.charcoal};
   
   ${({ comesFromRight }) => comesFromRight ? css`
     height: 186px;
@@ -137,6 +140,7 @@ export const SubTitleSt = styled.h2`
   margin-bottom: 16px;
   font-size: 24px;
   font-weight: 600;
+  color: ${colors.white};
   
   ${media.md(css`
     font-size: 32px;
@@ -153,42 +157,23 @@ export const DescriptionSt = styled.h3`
   font-weight: normal;
 `;
 
-export const LetsTalkrSt = styled.div`
+export const LetsTalkSt = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 44px 0px 64px;
+    background-color: ${colors.charcoal};
+    
+    p {
+      color: ${colors.white};
+    }
     
     > p a {
-      font-weight: 600;
-      text-decoration: underline;
+      margin-left: 4px;
     }
 `;
 
 export const SocialMediaContainerSt = styled.div`
   display: flex;
   flex-direction: row;
-`;
-
-export const SocialMediaIconSt = styled.a`
-  width: 56px;
-  height: 56px;
-  margin: 16px 12px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: ${colors.lightGray};
-  border-radius: 50%;
-  
-  ${media.md(css`
-    width: 72px;
-    height: 72px;
-    margin-right: 16px;
-    margin-left: 16px;
-  `)}
-  
-  ${media.lg(css`
-    margin-right: 20px;
-    margin-left: 20px;
-  `)}
 `;

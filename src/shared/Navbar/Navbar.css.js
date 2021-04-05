@@ -8,7 +8,7 @@ export const MenuBarSt = styled.div`
   left: 0;
   width: 100%;
   height: 88px;
-  background-color: ${colors.white};
+  background-color: ${({ bgColor }) => bgColor ? bgColor : colors.white};
   z-index: 999;
 `;
 
@@ -35,6 +35,10 @@ export const LogoSt = styled.div`
     width: 50%;
     font-size: 40px;
   `)}
+  
+  a {
+    color: ${({ isInverted }) => isInverted ? colors.white : colors.charcoal};
+  }
 `;
 
 export const MenuItemsSt = styled.div`
@@ -47,6 +51,10 @@ export const MenuItemsSt = styled.div`
     width: 50%;
     font-size: 24px;
   `)}
+  
+  a {
+    color: ${({ isInverted }) => isInverted ? colors.white : colors.charcoal};
+  }
   
   a:first-of-type {
     margin-right: 40px;

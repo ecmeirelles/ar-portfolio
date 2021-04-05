@@ -8,7 +8,7 @@ export const data = [
       "Hampden-Sydney College.",
   },
   {
-    id: 'guidannce',
+    id: 'guidance',
     title: "Providing guidance.",
     description: "Experience led. Contrary to popular belief, Lorem Ipsum is not simply " +
       "random text. It has roots in a piece of classical Latin literature from 45 BC, " +

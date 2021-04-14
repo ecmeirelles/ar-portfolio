@@ -1,11 +1,28 @@
 import styled, { css } from 'styled-components';
 import { Link } from "react-router-dom";
 import { colors, media } from "../../shared/variables";
+import { Text } from "../../shared/Text/Text";
 
 export const WrapperSt = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+`;
+
+export const HoverShapeSt = styled.div`
+  opacity: 1;
+  position: absolute;
+  height: 65%;
+  width: 80%;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: ${colors.charcoal};
+  transition: opacity .5s ease-in-out;
+  
+  ${media.xl(css`
+    opacity: 0;
+  `)}
 `;
 
 export const TextWrapperSt = styled.div`
@@ -16,9 +33,10 @@ export const TextWrapperSt = styled.div`
   opacity: 1;
   padding: 24px;
   text-align: center;
-  transition: .5s ease;
+  transition: opacity .5s ease-in-out;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  z-index: 999;
   
   ${media.xl(css`
     opacity: 0;
@@ -38,12 +56,11 @@ export const ImageWrapperSt = styled(Link)`
   img {
     width: 100%;
     height: 100%;
-    opacity: 0.5;
-    zoom: 1;
-    filter: alpha(opacity=0);
-    transition: .5s ease;
-    backface-visibility: hidden;
   }
+  
+  ${media.lg(css`
+    height: 100vh;
+  `)}
   
   ${media.xl(css`
     img {
@@ -51,8 +68,8 @@ export const ImageWrapperSt = styled(Link)`
     }
     
     &:hover {
-      img {
-        opacity: 0.5;
+      ${HoverShapeSt} {
+        opacity: 1;
       }
       ${TextWrapperSt} {
         opacity: 1;
@@ -61,25 +78,30 @@ export const ImageWrapperSt = styled(Link)`
   `)}
 `;
 
-export const ProjectTitleSt = styled.h1`
-  font-size: 24px;
-  font-weight: bold;
-  color: ${colors.white};
-  text-shadow: 1px 1px 2px ${colors.black};
-  
-  ${media.md(css`
-    font-size: 40px;
-  `)}
-`;
-
-export const ProjectSubtitleSt = styled.div`
+export const ProjectSubtitleSt = styled(Text).attrs(() => ({
+  color: colors.snow,
+}))`
   margin-top: 8px;
-  font-size: 16px;
-  color: ${colors.white};
-  text-shadow: 1px 1px 2px ${colors.black};
   
   ${media.lg(css`
     margin-top: 16px;
-    font-size: 24px;
+  `)}
+`;
+
+export const LaptopMouseContainerSt = styled.div`
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 48px;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+  
+  ${media.lg(css`
+    display: flex;
+  `)}
+  
+  ${media.xl(css`
+    bottom: 56px;
   `)}
 `;

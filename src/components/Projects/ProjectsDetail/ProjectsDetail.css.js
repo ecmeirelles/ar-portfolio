@@ -31,11 +31,10 @@ export const ImageWrapperSt = styled.div`
   img {
     width: 100%;
     height: 100%;
-    opacity: 1;
-    zoom: 1;
-    filter: alpha(opacity=0);
-    transition: .5s ease;
-    backface-visibility: hidden;
+    
+    ${media.lg(css`
+      height: 100vh;
+    `)}
   }
 `;
 
@@ -65,4 +64,38 @@ export const DescriptionTitleSt = styled.h1`
 
 export const DescriptionSt = styled.div`
   font-size: 16px;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export const NextProjectContainerSt = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  max-height: 150px;
+  background-image: url('${props => props.nextProjectImg}');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  padding-left: 24px;
+  
+  h2 {
+    margin-bottom: 16px;
+  }
+  
+  ${media.md(css`
+    min-height: 200px;
+    max-height: 200px;
+    padding-left: 120px;
+  `)}
+  
+  ${media.xl(css`
+    min-height: 300px;
+    max-height: 300px;
+    padding-left: 250px;
+  `)}
 `;

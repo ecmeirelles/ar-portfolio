@@ -8,7 +8,7 @@ export const MenuBarSt = styled.div`
   left: 0;
   width: 100%;
   height: 88px;
-  background-color: ${({ bgColor }) => bgColor ? bgColor : colors.white};
+  background-color: ${({ bgColor }) => bgColor ? bgColor : colors.snow};
   z-index: 999;
 `;
 
@@ -37,7 +37,7 @@ export const LogoSt = styled.div`
   `)}
   
   a {
-    color: ${({ isInverted }) => isInverted ? colors.white : colors.charcoal};
+    color: ${({ isInverted }) => isInverted ? colors.snow : colors.charcoal};
   }
 `;
 
@@ -53,7 +53,7 @@ export const MenuItemsSt = styled.div`
   `)}
   
   a {
-    color: ${({ isInverted }) => isInverted ? colors.white : colors.charcoal};
+    color: ${({ isInverted }) => isInverted ? colors.snow : colors.charcoal};
   }
   
   a:first-of-type {

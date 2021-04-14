@@ -33,8 +33,8 @@ PageTemplate.propTypes = {
 };
 
 PageTemplate.defaultProps = {
-  navbarColor: colors.white,
-  backgroundColor: colors.white,
+  navbarColor: colors.snow,
+  backgroundColor: colors.snow,
   isInverted: false,
   isTransparent: false,
 };

@@ -27,8 +27,8 @@ export const IconButtonSt = styled.a`
   `)}
   
   &:hover {
-    color: ${colors.white};
-    background-color: ${colors.lapizBlue};
+    color: ${colors.snow};
+    background-color: ${colors.petrol};
     opacity: 1;
   }
 `;

@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 import { colors, media } from "../../shared/variables";
+import { Heading } from "../../shared/Heading/Heading";
+import { Text } from "../../shared/Text/Text";
 
 export const WrapperSt = styled.div`
   width: 100%;
@@ -7,67 +9,56 @@ export const WrapperSt = styled.div`
   flex-direction: column;
 `;
 
+export const DescriptionSt = styled(Text).attrs(() => ({
+  color: colors.snow,
+}))``;
+
 export const HeaderSt = styled.div`
-  margin: 24px 24px 20px;
-  
-  h3 {
-    color: ${colors.white};
-    line-height: 24px;
-  }
+  position: relative;
+  padding: 24px;
   
   ${media.md(css`
+    position: absolute;
+    top: 128px;
+    left: 90px;
     max-width: 460px;
-    margin-left: 90px;
-    padding: 8px 0 32px;
+    padding: 0;
     
-    h3 {
+    ${DescriptionSt} {
       max-width: 460px;
     }
   `)}
   
   ${media.lg(css`
+    top: 85px;
+    left: 118px;
     max-width: 600px;
-    margin-left: 118px;
-    padding: 80px 0 84px;
   `)}
   
   ${media.xl(css`
+    left: 156px;
     max-width: 768px;
-    margin-left: 156px;
-    padding: 132px 0;
     
-    h3 {
+    ${DescriptionSt} {
       max-width: 568px;
     }
   `)}
 `;
 
-export const TitleSt = styled.h1`
+export const TitleSt = styled(Heading).attrs(() => ({
+  type: 1,
+  color: colors.snow,
+}))`
   margin-bottom: 24px;
-  font-size: 32px;
-  font-weight: 600;
-  color: ${colors.white};
-  
-  ${media.md(css`
-    font-size: 48px;
-  `)}
-  
-  ${media.xl(css`
-    font-size: 56px;
-  `)}
 `;
 
 export const ContentSt = styled.div`
   position: relative;
   padding: 24px;
-  
-  h3 {
-    color: ${colors.white};
-    line-height: 24px;
-  }
+
   ${media.md(css`
     position: absolute;
-    top: 204px;
+    top: 128px;
     z-index: 99;
     padding: 0;
     
@@ -76,7 +67,7 @@ export const ContentSt = styled.div`
     ` : css`
       left: 90px;
     `};
-    h3 {
+    ${DescriptionSt} {
       max-width: 500px;
     }
   `)}
@@ -86,17 +77,19 @@ export const ContentSt = styled.div`
     ` : css`
       left: 118px;
     `};
-    h3 {
+    ${DescriptionSt} {
       max-width: 568px;
     }
   `)}
   ${media.xl(css`
+    top: 204px;
+    
     ${({ comesFromRight }) => comesFromRight ? css`
       right: 156px;
     ` : css`
       left: 156px;
     `};
-    h3 {
+    ${DescriptionSt} {
       max-width: 568px;
     }
   `)}
@@ -114,11 +107,12 @@ export const BoxSt = styled.div`
   
   ${media.md(css`
     display: flex;
-    height: 568px;
+    height: 420px;
     width: ${({ comesFromRight }) => comesFromRight ? 75 : 25}%;
   `)}
   
   ${media.xl(css`
+    height: 568px;
     width: ${({ comesFromRight }) => comesFromRight ? 80 : 20}%;
   `)}
 `;
@@ -136,36 +130,28 @@ export const ContainerSt = styled.div`
   `)}
 `;
 
-export const SubTitleSt = styled.h2`
+export const SubTitleSt = styled(Heading).attrs(() => ({
+  type: 2,
+  color: colors.snow,
+}))`
   margin-bottom: 16px;
-  font-size: 24px;
-  font-weight: 600;
-  color: ${colors.white};
-  
-  ${media.md(css`
-    font-size: 32px;
-  `)}
   
   ${media.xl(css`
     margin-bottom: 24px;
-    font-size: 40px;
   `)}
-`;
-
-export const DescriptionSt = styled.h3`
-  font-size: 16px;
-  font-weight: normal;
 `;
 
 export const LetsTalkSt = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 44px 0px 64px;
+    padding: 32px 0px;
     background-color: ${colors.charcoal};
     
     p {
-      color: ${colors.white};
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: ${colors.snow};
     }
     
     > p a {

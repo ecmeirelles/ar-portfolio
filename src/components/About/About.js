@@ -24,31 +24,24 @@ export const About = () => {
     document.body.style.backgroundColor = colors.charcoal;
 
     return () => {
-      document.body.style.backgroundColor = colors.white;
+      document.body.style.backgroundColor = colors.snow;
     }
   }, []);
 
   return (
     <WrapperSt>
-      <HeaderSt>
-        <TitleSt>I design digital products with real people in mind.</TitleSt>
-        <DescriptionSt>
-          Currently working at heycar, a corporate venture of Volkswagen Financial
-          Services launched by BCG Digital Ventures, I believe humans should always
-          be at the center of how products are conceived, built, and improved.
-        </DescriptionSt>
-      </HeaderSt>
-
       {data.map((content, index) => {
         const isIndexEven = index % 2 === 0;
+        const Heading = index === 0 ? TitleSt : SubTitleSt;
+        const Content = index === 0 ? HeaderSt : ContentSt;
         return (
           <ContainerSt key={content.id}>
-            <ContentSt comesFromRight={isIndexEven}>
-              <SubTitleSt>{content.title}</SubTitleSt>
+            <Content comesFromRight={!isIndexEven}>
+              <Heading>{content.title}</Heading>
               <DescriptionSt>{content.description}</DescriptionSt>
-            </ContentSt>
-            <BoxSt comesFromRight={isIndexEven} />
+            </Content>
             <BoxSt comesFromRight={!isIndexEven} />
+            <BoxSt comesFromRight={isIndexEven} />
           </ContainerSt>
         )
       })}
@@ -64,9 +57,9 @@ export const About = () => {
           />
         </p>
         <SocialMediaContainerSt>
-          <IconButton iconName={faEnvelope} to="mailto:me@alicerevel.com" target="_blank" />
+          <IconButton iconName={faEnvelope} to="mailto:alicerevel08@gmail.com" target="_blank" />
           <IconButton iconName={faLinkedinIn} to="https://www.linkedin.com/in/alice-revel/" target="_blank" />
-          <IconButton iconName={faInstagram} to="https://www.instagram.com/a_rvl/" target="_blank" />
+          <IconButton iconName={faInstagram} to="https://www.instagram.com/a_revl/" target="_blank" />
         </SocialMediaContainerSt>
       </LetsTalkSt>
     </WrapperSt>

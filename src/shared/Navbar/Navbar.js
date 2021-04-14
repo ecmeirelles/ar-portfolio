@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { string, bool } from 'prop-types';
 
 import { ContentSt, LogoSt, MenuBarSt, MenuItemsSt } from "./Navbar.css";
-import {colors} from "../variables";
+import { colors } from "../variables";
 
 export const Navbar = ({ bgColor, isInverted }) => {
-  console.log({isInverted});
   return (
     <MenuBarSt bgColor={bgColor}>
       <ContentSt>
@@ -28,6 +27,6 @@ Navbar.propTypes = {
 };
 
 Navbar.defaultProps = {
-  bgColor: colors.white,
+  bgColor: colors.snow,
   isInverted: false,
 };

@@ -11,6 +11,7 @@ export const ContainerSt = styled.div`
 
 export const ArrowRightSt = styled.div`
   font-size: 24px;
+  color: ${props => props.color};
   
   ${media.md(css`
     font-size: 32px;
@@ -25,7 +26,7 @@ export const TextLinkSt = styled(Link)`
   display: flex;
   margin-left: 16px;
   font-size: 24px;
-  color: ${({ isInline }) => isInline ? colors.strawberry : colors.charcoal};
+  color: ${props => props.color};
   
   ${media.md(css`
     font-size: 32px;
@@ -38,7 +39,7 @@ export const TextLinkSt = styled(Link)`
 
 export const ExternalTextLinkSt = styled.a`
   font-weight: 600;
-  color: ${({ isInline }) => isInline ? colors.strawberry : colors.charcoal};
+  color: ${props => props.color};
   
   &:hover {
     text-decoration: underline;

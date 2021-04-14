@@ -12,18 +12,19 @@ export const ContentSt = styled.div`
   `)}
   
   ${media.lg(css`
-    max-width: 768px;
+    max-width: 650px;
     margin-left: 118px;
   `)}
   
   ${media.xl(css`
     margin-left: 156px;
+    max-width: 768px;
   `)}
 `;
 
 export const GreetingSt = styled.h3`
   font-size: 24px;
-  font-weight: normal;
+  font-weight: 300;
   
   ${media.md(css`
     font-size: 32px;
@@ -31,14 +32,23 @@ export const GreetingSt = styled.h3`
 `;
 
 export const TitleSt = styled.h1`
-  margin-top: 2px;
+  margin-top: 16px;
   margin-bottom: 16px;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 500;
   
   ${media.md(css`
-    margin-top: 16px;
+    margin-top: 24px;
+    margin-bottom: 48px;
+    font-size: 48px;
+  `)}
+  
+  ${media.lg(css`
     margin-bottom: 40px;
+  `)}
+  
+  ${media.xl(css`
+    margin-top: 16px;
     font-size: 56px;
   `)}
 `;
